@@ -1,0 +1,1579 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book 效率提升 -->
+<!-- Start book 效率提升 -->
+    <head>
+        <!-- head:start -->
+<!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>ssh connection closed | 效率提升</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="DMK">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-theme-comscore/test.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-multipart/multipart.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-tbfed-pagefooter/footer.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-anchors/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../ansible/global-name-is-not-defined.html" />
+    
+    
+    <link rel="prev" href="../ansible/sftp_closed.html" />
+    
+
+        <!-- head:end -->
+<!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+<!-- body:start -->
+        
+    <div class="book"
+        data-level="2.7"
+        data-chapter-title="ssh connection closed"
+        data-filepath="ansible/ssh-connection-closed.md"
+        data-basepath=".."
+        data-revision="Mon Jul 17 2017 17:20:42 GMT+0800 (HKT)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        效率提升
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="gitbook-editor-usage.html">
+            
+                
+                    <a href="../gitbook-editor-usage.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        GitBook Editor 使用指南
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="ansible/index.html">
+            
+                
+                    <a href="../ansible/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Ansible Error
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="ansible/ansible-playbook-debug.html">
+            
+                
+                    <a href="../ansible/ansible-playbook-debug.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        playbook常用问题定位方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="ansible/section1.html">
+            
+                
+                    <a href="../ansible/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Authentication Failure
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="ansible/section2.html">
+            
+                
+                    <a href="../ansible/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Incorrect become password
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="ansible/section3.html">
+            
+                
+                    <a href="../ansible/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        SSH Error: Permission denied\(public key, password\)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="ansible/checksum.html">
+            
+                
+                    <a href="../ansible/checksum.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        checksum failed
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="ansible/sftp_closed.html">
+            
+                
+                    <a href="../ansible/sftp_closed.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        Connection reset by peer
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.7" data-path="ansible/ssh-connection-closed.html">
+            
+                
+                    <a href="../ansible/ssh-connection-closed.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        ssh connection closed
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="ansible/global-name-is-not-defined.html">
+            
+                
+                    <a href="../ansible/global-name-is-not-defined.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.8.</b>
+                        
+                        global name is not defined
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="ansible/unarchive-failed.html">
+            
+                
+                    <a href="../ansible/unarchive-failed.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.9.</b>
+                        
+                        Unarchive failed
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="ansible/ansible-playbook-stuck.html">
+            
+                
+                    <a href="../ansible/ansible-playbook-stuck.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.10.</b>
+                        
+                        ansible-playbook stuck
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="ansible/getpwdnam-name-not-found.html">
+            
+                
+                    <a href="../ansible/getpwdnam-name-not-found.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.11.</b>
+                        
+                        getpwdnam name not found
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12" data-path="ansible/playbook task consume long time.html">
+            
+                
+                    <a href="../ansible/playbook task consume long time.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.12.</b>
+                        
+                        playbook task consume long time
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13" data-path="ansible/fail-regardless-of-when.html">
+            
+                
+                    <a href="../ansible/fail-regardless-of-when.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.13.</b>
+                        
+                        Fail regardless of when
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.14" data-path="ansible/waiting-for-a-privilege-escalation-password-prompt.html">
+            
+                
+                    <a href="../ansible/waiting-for-a-privilege-escalation-password-prompt.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.14.</b>
+                        
+                        waiting for a privilege escalation password prompt
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.15" data-path="ansible/playbook when not work.html">
+            
+                
+                    <a href="../ansible/playbook when not work.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.15.</b>
+                        
+                        playbook when not work
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.16" data-path="ansible/ansible-setup-failed-no-such-file-or-directory.html">
+            
+                
+                    <a href="../ansible/ansible-setup-failed-no-such-file-or-directory.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.16.</b>
+                        
+                        ansible setup failed: No such file or directory
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.17" data-path="ansible/shared-connection-closed.html">
+            
+                
+                    <a href="../ansible/shared-connection-closed.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.17.</b>
+                        
+                        Shared connection closed
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.18" data-path="ansible/data-could-not-be-sent-to-the-remote-host.html">
+            
+                
+                    <a href="../ansible/data-could-not-be-sent-to-the-remote-host.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.18.</b>
+                        
+                        data could not be sent to the remote host
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.19" data-path="ansible/host-key-fingerprint-check.html">
+            
+                
+                    <a href="../ansible/host-key-fingerprint-check.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.19.</b>
+                        
+                        host key fingerprint check
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.20" data-path="ansible/ssh-connection-error-while-waiting-for-sudo.html">
+            
+                
+                    <a href="../ansible/ssh-connection-error-while-waiting-for-sudo.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.20.</b>
+                        
+                        ssh connection error while waiting for sudo
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.21" data-path="ansible/cannot-create-directory-permission-denied.html">
+            
+                
+                    <a href="../ansible/cannot-create-directory-permission-denied.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.21.</b>
+                        
+                        cannot create directory permission denied
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.22" data-path="ansible/lvs-agent-hang.html">
+            
+                
+                    <a href="../ansible/lvs-agent-hang.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.22.</b>
+                        
+                        LVS安装SSH卡死问题验证
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.23" data-path="ansible/import-xxx-failed.html">
+            
+                
+                    <a href="../ansible/import-xxx-failed.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.23.</b>
+                        
+                        import xxx failed
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.24" data-path="ansible/throw_invailed_message.html">
+            
+                
+                    <a href="../ansible/throw_invailed_message.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.24.</b>
+                        
+                        命令无法执行，抛出大量执行信息
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.25" data-path="ansible/can-not-open-file-xxx-command.html">
+            
+                
+                    <a href="../ansible/can-not-open-file-xxx-command.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.25.</b>
+                        
+                        can not open file xxx command
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.26" data-path="ansible/undefined_error.html">
+            
+                
+                    <a href="../ansible/undefined_error.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.26.</b>
+                        
+                        Undefined variables
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.27" data-path="ansible/password_expired_hang.html">
+            
+                
+                    <a href="../ansible/password_expired_hang.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.27.</b>
+                        
+                        密码过期，任务卡死
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.28" data-path="ansible/write-failed-broken-pipe.html">
+            
+                
+                    <a href="../ansible/write-failed-broken-pipe.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.28.</b>
+                        
+                        卡死或Write failed: Broken Pipe
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="dmk/index.html">
+            
+                
+                    <a href="../dmk/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        DMK Error
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="dmk/section1.html">
+            
+                
+                    <a href="../dmk/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        验证码刷不出来
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="dmk/section2.html">
+            
+                
+                    <a href="../dmk/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        软件包同步失败
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="dmk/get_3rd_list.html">
+            
+                
+                    <a href="../dmk/get_3rd_list.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        获取第三方软件列表
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="dmk/dmk-portal-problem.html">
+            
+                
+                    <a href="../dmk/dmk-portal-problem.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        DMK界面不符合预期
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="dmk/upload_package_failed.html">
+            
+                
+                    <a href="../dmk/upload_package_failed.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        上传包失败
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="dmk/2.1.1version_error.html">
+            
+                
+                    <a href="../dmk/2.1.1version_error.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        升级至2.1.1版本后数据同步问题
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="dmk/start_process.html">
+            
+                
+                    <a href="../dmk/start_process.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        单节点DMK，服务无法自动拉起
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="dmk/globle_undefined_error.html">
+            
+                
+                    <a href="../dmk/globle_undefined_error.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.</b>
+                        
+                        全局配置文件不存在
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="Knowledge/index.html">
+            
+                
+                    <a href="../Knowledge/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Knowledge
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="Knowledge/mount.html">
+            
+                
+                    <a href="../Knowledge/mount.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Linux mount
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="Knowledge/linux-screen-command.html">
+            
+                
+                    <a href="../Knowledge/linux-screen-command.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Linux screen
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="Knowledge/linux-rsync.html">
+            
+                
+                    <a href="../Knowledge/linux-rsync.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        Linux rsync
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="Knowledge/linux-watch.html">
+            
+                
+                    <a href="../Knowledge/linux-watch.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        Linux watch
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="Knowledge/linux-sar.html">
+            
+                
+                    <a href="../Knowledge/linux-sar.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        Linux sar
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="Knowledge/hard-soft-link.html">
+            
+                
+                    <a href="../Knowledge/hard-soft-link.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        软、硬链接
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="Knowledge/gitbook-editor-install-plugin.html">
+            
+                
+                    <a href="../Knowledge/gitbook-editor-install-plugin.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        GitBook Editor安装插件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="Knowledge/nginx.html">
+            
+                
+                    <a href="../Knowledge/nginx.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.8.</b>
+                        
+                        nginx.conf配置文件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="Knowledge/proxy.html">
+            
+                
+                    <a href="../Knowledge/proxy.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.9.</b>
+                        
+                        理解正向和反向代理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="Knowledge/linux-ext3-journal.html">
+            
+                
+                    <a href="../Knowledge/linux-ext3-journal.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.10.</b>
+                        
+                        了解文件系统
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.11" data-path="Knowledge/pgup-pgdn-history.html">
+            
+                
+                    <a href="../Knowledge/pgup-pgdn-history.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.11.</b>
+                        
+                        PgUp PgDn History
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="Guide/index.html">
+            
+                
+                    <a href="../Guide/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        DMK Guide
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="Guide/ansible-config-set.html">
+            
+                
+                    <a href="../Guide/ansible-config-set.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Ansible Config Set
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="Guide/serviceansibleconfigset.html">
+            
+                
+                    <a href="../Guide/serviceansibleconfigset.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        修改Ansible配置，提升性能
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="Guide/troubleshoot-ssh-problems.html">
+            
+                
+                    <a href="../Guide/troubleshoot-ssh-problems.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        SSH连通性验证
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="Guide/ssh-springboard.html">
+            
+                
+                    <a href="../Guide/ssh-springboard.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        SSH跳板机
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="Guide/dmk.html">
+            
+                
+                    <a href="../Guide/dmk.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                        DMK适配、安装、升级
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="Guide/test.html">
+            
+                
+                    <a href="../Guide/test.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.6.</b>
+                        
+                        Repoman对接及问题排查
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.7" data-path="Guide/verify-package-team.html">
+            
+                
+                    <a href="../Guide/verify-package-team.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.7.</b>
+                        
+                        包类型、账号创建说明
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.8" data-path="Guide/clone-dmk-server.html">
+            
+                
+                    <a href="../Guide/clone-dmk-server.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.8.</b>
+                        
+                        克隆生成DMK主备节点
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.9" data-path="Guide/user_pwd_update_trigger.html">
+            
+                
+                    <a href="../Guide/user_pwd_update_trigger.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.9.</b>
+                        
+                        DMK账号过期特性修改
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.10" data-path="Guide/modify-floatip.html">
+            
+                
+                    <a href="../Guide/modify-floatip.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.10.</b>
+                        
+                        修改浮动IP
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.11" data-path="Guide/modify_sysadmin_passwd.html">
+            
+                
+                    <a href="../Guide/modify_sysadmin_passwd.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.11.</b>
+                        
+                        解锁、修改sysadmin密码
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.12" data-path="Guide/multi_region.html">
+            
+                
+                    <a href="../Guide/multi_region.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.12.</b>
+                        
+                        多Region功能指导
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.13" data-path="Guide/dmk-opsassistant.html">
+            
+                
+                    <a href="../Guide/dmk-opsassistant.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.13.</b>
+                        
+                        DMK对接OpsAssistant
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.14" data-path="Guide/dmk_config_priority.html">
+            
+                
+                    <a href="../Guide/dmk_config_priority.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.14.</b>
+                        
+                        DMK配置生效优先级
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.15" data-path="dmk/validate_user_guide.html">
+            
+                
+                    <a href="../dmk/validate_user_guide.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.15.</b>
+                        
+                        Account验证使用指南
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.16" data-path="Guide/dmk_api_call.html">
+            
+                
+                    <a href="../Guide/dmk_api_call.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.16.</b>
+                        
+                        DMK的API调用指导
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.17" data-path="Guide/modify_playbook_backend.html">
+            
+                
+                    <a href="../Guide/modify_playbook_backend.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.17.</b>
+                        
+                        DMK后台修改playbook
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.18" data-path="Guide/dmk-vault.html">
+            
+                
+                    <a href="../Guide/dmk-vault.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.18.</b>
+                        
+                        DMK Vault使用指南
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.19" data-path="Guide/dmk_proxy_guide.html">
+            
+                
+                    <a href="../Guide/dmk_proxy_guide.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.19.</b>
+                        
+                        DMK跳板机使用指南
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.20" data-path="Guide/euler_dmk_playbook_syntax_check.html">
+            
+                
+                    <a href="../Guide/euler_dmk_playbook_syntax_check.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.20.</b>
+                        
+                        Euler的DMK上Playbook语法检查
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.21" data-path="Guide/job-store-and-configs.html">
+            
+                
+                    <a href="../Guide/job-store-and-configs.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.21.</b>
+                        
+                        DMK任务的保存和配置查找
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.22" data-path="Guide/switch-sudo-to-su.html">
+            
+                
+                    <a href="../Guide/switch-sudo-to-su.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.22.</b>
+                        
+                        Ansible使用su提权
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.23" data-path="Guide/hosts.html">
+            
+                
+                    <a href="../Guide/hosts.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.23.</b>
+                        
+                        主机仓库指导
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="Wiki/index.html">
+            
+                
+                    <a href="../Wiki/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Wiki
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="Wiki/health-check-report.html">
+            
+                
+                    <a href="../Wiki/health-check-report.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        系统健康检查
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="Wiki/rsync-system-io-high.html">
+            
+                
+                    <a href="../Wiki/rsync-system-io-high.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        rsync系统盘IO 100%
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="Wiki/ubuntu-1404-install-ruby-on-rails.html">
+            
+                
+                    <a href="../Wiki/ubuntu-1404-install-ruby-on-rails.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        Ubuntu 14.04安装ROR
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="Wiki/ubuntu-install-gitbook.html">
+            
+                
+                    <a href="../Wiki/ubuntu-install-gitbook.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        Ubuntu安装GitBook
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="Wiki/ubuntu-book-cd.html">
+            
+                
+                    <a href="../Wiki/ubuntu-book-cd.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.5.</b>
+                        
+                        Book CI
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="Wiki/easyjenkinsbookci.html">
+            
+                
+                    <a href="../Wiki/easyjenkinsbookci.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.6.</b>
+                        
+                        趟坑后的简易CI过程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="Wiki/redhatiplvm.html">
+            
+                
+                    <a href="../Wiki/redhatiplvm.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.7.</b>
+                        
+                        欧拉LVM
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="Wiki/sshstudy.html">
+            
+                
+                    <a href="../Wiki/sshstudy.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.8.</b>
+                        
+                        SSH登录和交互
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.9" data-path="Wiki/dmk-euler-install.html">
+            
+                
+                    <a href="../Wiki/dmk-euler-install.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.9.</b>
+                        
+                        DMK欧拉适配
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.10" data-path="Wiki/ubuntu-use-zsh.html">
+            
+                
+                    <a href="../Wiki/ubuntu-use-zsh.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.10.</b>
+                        
+                        Ubuntu Use Zsh
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.11" data-path="Wiki/password_include_single_quote.html">
+            
+                
+                    <a href="../Wiki/password_include_single_quote.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.11.</b>
+                        
+                        密码包含单引号的问题排查和解决
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.12" data-path="Wiki/screen_gitbook_jenkins.html">
+            
+                
+                    <a href="../Wiki/screen_gitbook_jenkins.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.12.</b>
+                        
+                        Gitbook CI启动
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >效率提升</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h4 id="&#x95EE;&#x9898;&#xFF1A;">&#x95EE;&#x9898;&#xFF1A;</h4>
+<pre><code>ssh connection closed waiting for a priviledge escalation password prompt
+</code></pre><h4 id="&#x539F;&#x56E0;&#xFF1A;">&#x539F;&#x56E0;&#xFF1A;</h4>
+<ul>
+<li><p>sudo/su&#x7B49;&#x63D0;&#x6743;&#x64CD;&#x4F5C;&#x8981;&#x6709;&#x7CFB;&#x7EDF;&#x5BC6;&#x7801;&#x4EA4;&#x4E92;&#x8FC7;&#x7A0B;&#xFF0C;&#x5207;&#x81F3;root&#x5931;&#x8D25;</p>
+</li>
+<li><p>sudoers&#x6587;&#x4EF6;&#x914D;&#x7F6E;&#x9519;&#x8BEF;&#xFF0C;&#x5BFC;&#x81F4;<code>sudo su - root</code>&#x65E0;&#x6CD5;&#x5207;&#x6362;&#x81F3;root&#x7528;&#x6237;</p>
+</li>
+</ul>
+<h4 id="&#x89E3;&#x51B3;&#xFF1A;">&#x89E3;&#x51B3;&#xFF1A;</h4>
+<p>&#x767B;&#x5F55;host&#x673A;&#x5668;&#xFF0C;&#x5E76;&#x5C1D;&#x8BD5;&#x5207;&#x6362;&#x81F3;root&#x7528;&#x6237;&#xFF0C;&#x67E5;&#x770B;&#x662F;&#x5426;&#x63D0;&#x793A;&#x8F93;&#x5165;root&#x5BC6;&#x7801;&#xFF0C;&#x5E76;&#x80FD;&#x5207;&#x6362;&#x6210;&#x529F;&#x3002;</p>
+<h4 id="&#x8D26;&#x53F7;&#x9A8C;&#x8BC1;&#x6210;&#x529F;&#x4E86;&#x5417;&#xFF1F;"><a href="dmk/validate_user_guide.md">&#x8D26;&#x53F7;&#x9A8C;&#x8BC1;</a>&#x6210;&#x529F;&#x4E86;&#x5417;&#xFF1F;</h4>
+<footer class="page-footer"><span class="copyright">&#x516C;&#x5171;&#x670D;&#x52A1;&#x4E0E;&#x7EC4;&#x4EF6;&#x4EA7;&#x54C1;&#x90E8; &amp; <a href="http://code.huawei.com/OWL/AutoDeployment" target="_blank">Deploy Management Kit</a> all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x540E;&#x66F4;&#x65B0;&#x4E8E;&#xFF1A;
+2017-07-17 17:19:50
+</span></footer>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../ansible/sftp_closed.html" class="navigation navigation-prev " aria-label="Previous page: Connection reset by peer"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../ansible/global-name-is-not-defined.html" class="navigation navigation-next " aria-label="Next page: global name is not defined"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-theme-comscore/test.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"theme-default":{"showLevel":true},"tbfed-pagefooter":{"copyright":"公共服务与组件产品部 & <a href='http://code.huawei.com/OWL/AutoDeployment'>Deploy Management Kit</a>","modify_label":"最后更新于：","modify_format":"YYYY-MM-DD HH:mm:ss"},"theme-comscore":{},"splitter":{},"prism":{},"toggle-chapters":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"multipart":{},"expandable-chapters-small":{},"anchors":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+<!-- body:end -->
+    </body>
+    <!-- End of book 效率提升 -->
+<!-- End of book 效率提升 -->
+</html>
